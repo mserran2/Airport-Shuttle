@@ -1,0 +1,41 @@
+<%= form_for(@shuttle) do |f| %>
+  <% if @shuttle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shuttle.errors.count, "error") %> prohibited this shuttle from being saved:</h2>
+
+      <ul>
+      <% @shuttle.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :depart %><br />
+    <%= f.time_select :depart, :ampm => true %>
+  </div>
+  <div class="field">
+    <%= f.label :arrive %><br />
+    <%= f.time_select :arrive, :ampm => true %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :shuttle_number %><br />
+    <%= f.number_field :shuttle_number %>
+  </div>
+  <div class="field">
+    <%= f.label :seats %><br />
+    <%= f.number_field :seats %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -6,4 +6,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require res_script
+//= require jquery_ui_1821

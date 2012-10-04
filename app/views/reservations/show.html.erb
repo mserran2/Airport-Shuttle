@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First:</b>
+  <%= @reservation.first %>
+</p>
+
+<p>
+  <b>Last:</b>
+  <%= @reservation.last %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @reservation.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @reservation.phone %>
+</p>
+
+<p>
+  <b>Shuttle:</b>
+  <%= @reservation.shuttle_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @reservation.location_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>

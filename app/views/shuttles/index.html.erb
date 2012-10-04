@@ -1,0 +1,33 @@
+<h1>Listing shuttles</h1>
+
+<table>
+  <tr>
+    <th>Depart</th>
+    <th>Arrive</th>
+    <th>Date</th>
+    <th>Shuttle number</th>
+    <th>Seats</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shuttles.each do |shuttle| %>
+  <tr>
+    <td><%= shuttle.depart.strftime("%l:%M %p") %></td>
+    <td><%= shuttle.arrive.strftime("%l:%M %p") %></td>
+    <td><%= shuttle.date.strftime("%b %d %y") %></td>
+    <td><%= shuttle.shuttle_number %></td>
+    <td><%= shuttle.seats %></td>
+    <td><%= shuttle.price %></td>
+    <td><%= link_to 'Show', shuttle %></td>
+    <td><%= link_to 'Edit', edit_shuttle_path(shuttle) %></td>
+    <td><%= link_to 'Destroy', shuttle, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shuttle', new_shuttle_path %>

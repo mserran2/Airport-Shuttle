@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Depart</th>
+    <th>Arrive</th>
+    <th>Shuttle #</th>
+    <th>Price</th>
+	<th></th>
+  </tr>
+
+<% @shuttles.each do |shuttle| %>
+  <tr class="<%= cycle("odd", "even") %>">
+    <td><%= shuttle.depart.strftime("%l:%M %p") %></td>
+    <td><%= shuttle.arrive.strftime("%l:%M %p") %></td>
+    <td><%= shuttle.shuttle_number %></td>
+    <td><%= number_to_currency(shuttle.price , :precision => 2)%></td>
+	<th><a id="shuttle_<%= shuttle.id %>" class="shuttle_select">Select Shuttle</a></th>
+  </tr>
+<% end %>
+</table>

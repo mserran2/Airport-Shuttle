@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Depart:</b>
+  <%= @shuttle.depart %>
+</p>
+
+<p>
+  <b>Arrive:</b>
+  <%= @shuttle.arrive %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @shuttle.date %>
+</p>
+
+<p>
+  <b>Shuttle number:</b>
+  <%= @shuttle.shuttle_number %>
+</p>
+
+<p>
+  <b>Seats:</b>
+  <%= @shuttle.seats %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @shuttle.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_shuttle_path(@shuttle) %> |
+<%= link_to 'Back', shuttles_path %>

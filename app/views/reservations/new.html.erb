@@ -1,0 +1,21 @@
+<h1>New reservation</h1>
+<div class="page_container">
+	<div class="new_reservation">
+		<div class="res_header">Select A Shuttle</div>
+		<div class="tabs">
+			<% @days.each do |day| %>
+			<div class="tab<%= " selected" if @days.first == day %>" data-date="<%= day.date.strftime("%Y%m%d") %>"><%= day.date.strftime("%b %d") %></div>
+			<% end %>
+		</div>
+		<div class="res_body">
+		<%= render "shuttles/shuttles_by_day" %>
+		</div>
+	</div>
+	<div class="selections">
+		<%= render 'form' %>
+	</div>
+</div>
+	
+
+<%= link_to 'Back', reservations_path %>
+

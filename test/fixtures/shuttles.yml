@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  depart: 2012-10-03 17:08:06
+  arrive: 2012-10-03 17:08:06
+  date: 2012-10-03
+  shuttle_number: 1
+  seats: 1
+  price: 1.5
+
+two:
+  depart: 2012-10-03 17:08:06
+  arrive: 2012-10-03 17:08:06
+  date: 2012-10-03
+  shuttle_number: 1
+  seats: 1
+  price: 1.5

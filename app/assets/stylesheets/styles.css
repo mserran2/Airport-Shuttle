@@ -1,0 +1,121 @@
+@font-face {  
+  font-family: "YanoneKaffeesatzBold" ;  
+  src: url( /YanoneKaffeesatz-Bold.ttf) format("truetype");  
+}
+@font-face {  
+  font-family: "YanoneKaffeesatzRegular" ;  
+  src: url( /YanoneKaffeesatz-Regular.ttf ) format("truetype");  
+}
+
+
+body{
+	margin:0;
+	padding:0;
+	background:#fffae8;
+	font-family: "YanoneKaffeesatzBold","Lucida Sans",Geneva,sans-serif;
+	background: url("/assets/parchment_paper_seamless_pattern.jpeg");
+}
+
+.page_container{
+	position:relative;
+	width:600px;
+	margin:50px auto;
+}
+
+.new_reservation{
+	width:600px;
+}
+
+.new_reservation > *{
+	position:relative;
+}
+
+.res_header{
+	width:590px;
+	height: 30px;
+	padding: 30px 0 0 10px;
+	background:#b4c9cd;
+	border-radius: 14px 14px 0px 0px; 
+	-moz-border-radius: 14px 14px 0px 0px; 
+	-webkit-border-radius: 14px 14px 0px 0px;
+	font-size:36px;
+	text-transform:uppercase;
+	color:#808f94;
+
+	z-index:2;
+}
+/** 7a89af **/
+
+
+
+.tabs{
+	width:100%;
+	height:40px;
+	background:#dabea3;
+	z-index:1;
+	-moz-box-shadow:    inset 0 0 10px #d0b699;
+	-webkit-box-shadow: inset 0 0 10px #d0b699;
+	box-shadow:         inset 0 0 10px #d0b699;
+}
+
+.tabs > .tab{
+	color:#fffff6;
+	float:left;
+	height:28px;
+	width:120px;
+	font-size: 22px;
+	text-align: center;
+	padding-top: 12px;
+	cursor:pointer;
+}
+
+.tabs > .tab:hover{
+	background:#b4c9cd;
+}
+
+.tabs > .tab.selected{
+	background:#fffaef;
+	margin-top:2px;
+	border-top:2px solid #ac7371;
+	height:28px;
+	padding-top:8px;
+	color:#61584e;
+}
+.new_reservation table{
+	width: 100%;
+	color:#62574b;
+	background:#fffff5;
+	text-align: center;
+	border-spacing: 0;
+}
+
+.new_reservation th{
+	font-size:24px;
+	text-transform:uppercase;
+}
+.new_reservation tr{
+	height: 35px;
+}
+
+tr.even{
+	background:#fdf4e7;
+}
+
+.selections{
+	display:none;
+	position:absolute;
+	top:0;
+	right:10px;
+	width:180px;
+}
+
+.shuttle_select{
+	font-size:16px;
+	color:#62574b;
+	cursor:pointer;
+}
+
+.shuttle_select:hover{
+	color:#b4c9cd;
+	background:none;
+}

@@ -1,4 +1,12 @@
 AirportShuttle::Application.routes.draw do
+  resources :locations
+
+  resources :reservations
+
+  resources :shuttles
+  
+  match 'shuttles/shuttles_by_day/:did' => "shuttles#shuttles_by_day"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -13,7 +13,7 @@ class ReservationsController < ApplicationController
   # GET /reservations/1
   # GET /reservations/1.json
   def show
-    @reservation = Reservation.find(params[:id])
+    @reservation = Reservation.includes(:location,:shuttle).find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,6 +26,7 @@ class ReservationsController < ApplicationController
   def new
     @days = Shuttle.select("DISTINCT date").where(:date => Date.today...Date.today + 1.month).order(:date).limit(5)
     @shuttles = Shuttle.where(:date => @days.first.date).order(:depart)
+    @locations = Location.all
     @reservation = Reservation.new
     respond_to do |format|
       format.html # new.html.erb

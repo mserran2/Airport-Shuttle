@@ -12,7 +12,17 @@
 		</div>
 	</div>
 	<div class="selections">
-		<%= render 'form' %>
+		<div class="sel_header">Confirm</div>
+		<div class="sel_form">
+			<div class="sel_info">
+				You Selected:
+				<div class="sub_info">
+				Shuttle #: <span id="shuttlenum"></span><br />
+				Departs: <span id="shuttledep"></span>
+				</div>
+			</div>
+			<%= render 'form' %>
+		</div>
 	</div>
 </div>
 	

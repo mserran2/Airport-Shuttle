@@ -1,35 +1,23 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>First:</b>
-  <%= @reservation.first %>
-</p>
-
-<p>
-  <b>Last:</b>
-  <%= @reservation.last %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @reservation.email %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @reservation.phone %>
-</p>
-
-<p>
-  <b>Shuttle:</b>
-  <%= @reservation.shuttle_id %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%= @reservation.location_id %>
-</p>
+<div class="res_header">Done!</div>
+<div class="res_confirm">
+	<div class="confirmation_number">Confirmation #: <%= @reservation.id %>
+		<span style="font-size: 15px; vertical-align: text-top;">*</span>
+	</div>
+	<div class="trip_info">
+	  <b>Trip Information:</b><br />
+	  <%= pluralize(1, "seat").capitalize %> reserved on Shuttle # <%= @reservation.shuttle.shuttle_number %><br />
+	  Departs: <%= @reservation.shuttle.depart.strftime("%l:%M %p") %><br />
+	  Pick-up Location: <%= @reservation.location.name %>
+	</div>
+	<div class="reservation_info">
+	  Reserved for:<br />
+	  <%= "#{@reservation.first} #{@reservation.last}" %><br />
+	  <%= @reservation.email %><br />
+	  <%= @reservation.phone %>
+	</div>
+	
+	<div style="clear:both;"></div>
+	<div class="subnote">*Please save your confirmation number, as you will need it to change or cancel your reservation.</div>
+</div>
 
 
-<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
-<%= link_to 'Back', reservations_path %>

@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first %><br />
+    <%= f.label :first, "First Name" %><br />
     <%= f.text_field :first %>
   </div>
   <div class="field">
-    <%= f.label :last %><br />
+    <%= f.label :last, "Last Name" %><br />
     <%= f.text_field :last %>
   </div>
   <div class="field">
@@ -25,15 +25,14 @@
   </div>
   <div class="field">
     <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
+    <%= f.phone_field :phone %>
   </div>
   <div class="field">
-    <%= f.label :shuttle_id %><br />
-    <%= f.text_field :shuttle_id %>
+    <%= f.hidden_field :shuttle_id %>
   </div>
   <div class="field">
     <%= f.label :location_id %><br />
-    <%= f.number_field :location_id %>
+    <%= f.select :location_id, options_from_collection_for_select(@locations, 'id', 'name') %>
   </div>
   <div class="actions">
     <%= f.submit %>

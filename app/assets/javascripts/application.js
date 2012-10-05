@@ -7,4 +7,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require res_script
-//= require jquery_ui_1821
+//= require jquery_ui_1824
+//= require masked_input

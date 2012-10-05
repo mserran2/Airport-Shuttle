@@ -7,6 +7,22 @@
   src: url( /YanoneKaffeesatz-Regular.ttf ) format("truetype");  
 }
 
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -50px;
+}
+.footer, .push {
+height: 50px;
+text-align:center;
+}
 
 body{
 	margin:0;
@@ -30,7 +46,7 @@ body{
 	position:relative;
 }
 
-.res_header{
+.res_header, .sel_header{
 	width:590px;
 	height: 30px;
 	padding: 30px 0 0 10px;
@@ -44,7 +60,14 @@ body{
 
 	z-index:2;
 }
-/** 7a89af **/
+
+.sel_header{
+	position:absolute;
+	top:0;
+	right:0;
+	width:170px;
+}
+
 
 
 
@@ -105,9 +128,21 @@ tr.even{
 	display:none;
 	position:absolute;
 	top:0;
+	padding-top:20px;
+	bottom:0;
 	right:10px;
 	width:180px;
 }
+
+.sel_form{
+	width: 160px;
+	padding: 10px;
+	position: absolute;
+	bottom: 0;
+	top: 60px;
+	background: #FFFFF5;
+}
+
 
 .shuttle_select{
 	font-size:16px;
@@ -118,4 +153,67 @@ tr.even{
 .shuttle_select:hover{
 	color:#b4c9cd;
 	background:none;
+}
+tr.selrow a.shuttle_select:hover{
+	color:#62574b;
+}
+
+.sel_form input{
+	font-family: "YanoneKaffeesatzBold";
+	letter-spacing: 1px;
+	font-size: 15px;
+	width: 155px;
+	border-radius: 7px 0px 7px 0px; 
+	-moz-border-radius: 7px 0px 7px 0px; 
+	-webkit-border-radius: 7px 0px 7px 0px;
+	padding: 5px 0 0 5px;
+}
+
+.sel_form input[type="submit"]{
+	background-color:#dabea3;
+}
+
+tr.selrow{
+	background-color:#dabea3;
+}
+
+.sel_info{
+	font-size:24px;
+	margin-bottom:20px;
+	line-height: 24px;
+}
+
+.sel_info .sub_info{
+	padding-left:10px;
+	font-size:18px;
+	line-height:18px;
+}
+
+.res_confirm{
+	background:#fffff5;
+	width:560px;
+	padding:20px;
+	font-size: 18px;
+}
+
+.confirmation_number{
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+.trip_info, .reservation_info{
+	float:left;
+	max-width:280px;
+}
+
+.trip_info{
+	width:270px;
+	padding-right:10px;
+	font-size: 13px;
+	margin-top: 10px;
+}
+
+.subnote{
+	font-size: 13px;
+	margin-top: 10px;
 }

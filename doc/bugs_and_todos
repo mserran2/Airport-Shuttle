@@ -1,0 +1,10 @@
+TODOS
+- Implement many to many reservation in shuttles
+- Allow for multiple segment trips.
+- Create destinations DB with one to  many relation with pick-up locations
+
+
+
+
+BUGS
+- Fix JS error that causes form to be submitted the number of times that a user clicks on "select Shuttle"

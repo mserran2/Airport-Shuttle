@@ -1,4 +1,8 @@
 class Reservation < ActiveRecord::Base
-  belongs_to :reservation
+=begin
+  has_many :segments
+  has_many :shuttles, :through => :segments
+=end
   belongs_to :shuttle
+  belongs_to :location
 end

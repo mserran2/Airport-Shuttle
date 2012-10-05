@@ -8,12 +8,14 @@
   </tr>
 
 <% @shuttles.each do |shuttle| %>
-  <tr class="<%= cycle("odd", "even") %>">
+  <tr class="<%= cycle("odd", "even") %>" id="shuttle_row_<%= shuttle.id %>">
     <td><%= shuttle.depart.strftime("%l:%M %p") %></td>
     <td><%= shuttle.arrive.strftime("%l:%M %p") %></td>
     <td><%= shuttle.shuttle_number %></td>
     <td><%= number_to_currency(shuttle.price , :precision => 2)%></td>
-	<th><a id="shuttle_<%= shuttle.id %>" class="shuttle_select">Select Shuttle</a></th>
+	<th><a id="shuttle_<%= shuttle.id %>" class="shuttle_select" 
+		data-sid="<%= shuttle.id %>" data-dep="<%= shuttle.depart.strftime("%l:%M %p") %>"
+		data-snum="<%= shuttle.shuttle_number %>">Select Shuttle</a></th>
   </tr>
 <% end %>
 </table>
